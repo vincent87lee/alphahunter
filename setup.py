@@ -21,7 +21,7 @@ setup(
         "marketmaker", "binance", "okex", "huobi", "bitmex", "ftx"
     ],
     install_requires=[
-        "aiohttp==3.2.1",
+        "aiohttp==3.7.4",
         "aioamqp==0.13.0",
         "motor==2.0.0"
     ],

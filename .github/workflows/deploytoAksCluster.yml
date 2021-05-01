@@ -27,7 +27,7 @@ jobs:
     - name: Build and push image to ACR
       id: build-image
       run: |
-        docker build "$GITHUB_WORKSPACE/shykes/myapp ." -f  "path/to/a/Dockerfile ." -t k8sregistryluca.azurecr.io/k8s:${{ github.sha }} --label dockerfile-path=path/to/a/Dockerfile .
+        docker build "$GITHUB_WORKSPACE/shykes/myapp ." -f  "alpine:latest" -t k8sregistryluca.azurecr.io/k8s:${{ github.sha }} --label dockerfile-path=alpine:latest
         docker push k8sregistryluca.azurecr.io/k8s:${{ github.sha }}
     
     - uses: azure/k8s-set-context@v1
